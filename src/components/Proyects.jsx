@@ -1,11 +1,13 @@
 import ViewProyects from './ViewProyects';
+import portfolioImg from '../img/portfolio.png';
+import portfolioBasic from '../img/basic portfolio.png';
 
 function Proyects({ id }) {
     const infoProyects = [
         {
             title: 'Portfolio with React',
             description: 'Portafolio personal con React. Es esta web en la que estás navegando',
-            image: 'https://private-user-images.githubusercontent.com/144632086/480586151-b213c4bf-b8e4-4ad8-bad3-d59f3c8b63ce.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTU4MTQ3MjksIm5iZiI6MTc1NTgxNDQyOSwicGF0aCI6Ii8xNDQ2MzIwODYvNDgwNTg2MTUxLWIyMTNjNGJmLWI4ZTQtNGFkOC1iYWQzLWQ1OWYzYzhiNjNjZS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwODIxJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDgyMVQyMjEzNDlaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0zN2QwNjVkNTQ0ZDdkNzU2NjA3ZGZhZWUxNmYzMGFlZDMwZTMwOGE4NTY1YTgwMzNiZjYzYWE1ODYyYWNlNDY3JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.H8zAky3nzgcwnsJHdKiR5Jmvxa2rUhszxO0cITtLqXU',
+            image: portfolioImg,
             tecnology1: 'React',
             tecnology2: 'Node.js',
             tecnology3: 'Tailwind CSS',
@@ -15,7 +17,7 @@ function Proyects({ id }) {
         {
             title: 'Basic Portfolio',
             description: 'Portafolio básico utilizando las tres tecnologías principales.',
-            image: 'https://private-user-images.githubusercontent.com/144632086/480726673-0133f354-073c-4bda-8f72-74907e42532b.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTU4MTU3MjcsIm5iZiI6MTc1NTgxNTQyNywicGF0aCI6Ii8xNDQ2MzIwODYvNDgwNzI2NjczLTAxMzNmMzU0LTA3M2MtNGJkYS04ZjcyLTc0OTA3ZTQyNTMyYi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwODIxJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDgyMVQyMjMwMjdaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0zZmRkZWJjNTA5YWZkYzJmZTVlYTMwOWE2YjZjN2NjZjcxN2YyMDIwNzYyZDVmNzA3ODJmZDM4NGIzMTM2MjVkJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.aXBp5AdMqZ7-w25P_K2yY9-z4C8rby3OKUaXFGKFwvU',
+            image: portfolioBasic,
             tecnology1: 'HTML',
             tecnology2: 'Tailwind CSS',
             tecnology3: 'JavaScript',
