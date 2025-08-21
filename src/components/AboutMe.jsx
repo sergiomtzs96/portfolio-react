@@ -10,7 +10,7 @@ import palette from '../img/palette.svg';
 
 const AboutMe = () => {
     return (
-        <div id='aboutme' className="mt-20 mb-10 w-full">
+        <div id='aboutme' className="mt-20 mb-10 w-full" data-aos="fade-up">
             <div className='flex flex-col w-full items-center p-10 text-center'>
                 <div className="w-200">
                     <h1 className="text-3xl font-bold mb-5">Acerca de mí</h1>
@@ -20,7 +20,7 @@ const AboutMe = () => {
                     <img className='w-150 rounded-xl' src={code} alt="code" />
                 </div>
             </div>
-            <div className='flex flex-col items-center text-justify p-10 w-full'>
+            <div className='flex flex-col items-center text-justify p-10 w-full' data-aos="fade-down">
                 <div className='w-200 '>
                     <h5 className='text-2xl font-bold'>Mi historia</h5>
                     <p className='mt-5'> Comencé mi viaje en el desarrollo web hace más de 5 años. Mi pasión por resolver problemas complejos y crear experiencias digitales excepcionales me ha llevado a especializarme en tecnologías modernas como React, Node.js y cloud computing.
@@ -28,14 +28,14 @@ const AboutMe = () => {
                         Me encanta trabajar en proyectos desafiantes donde puedo combinar creatividad con tecnología para crear soluciones que realmente impacten a los usuarios. </p>
                 </div>
             </div>
-            <div className='w-full flex items-center justify-center gap-20'>
+            <div className='w-full flex items-center justify-center gap-20' data-aos="fade-right">
                 <div className='flex justify-between w-200'>
                     <Stats icon={users} value="50+" description="Proyectos completados" />
                     <Stats icon={medal} value="5+" description="Años de experiencia" />
                     <Stats icon={coffee} value="20000" description="Tazas de café" />
                 </div>
             </div>
-            <div className='w-full flex flex-col items-center'>
+            <div className='w-full flex flex-col items-center' data-aos="fade-left">
                 <div className='w-200 justify-center'>
                     <Campos icon={coding} campo="Desarrollo Frontend" description="Experto en React, Vue.js y tecnologías modernas de frontend" />
                     <Campos icon={ray} campo="Desarrollo Backend" description="Especializado en Node.js, Python y bases de datos modernas" />

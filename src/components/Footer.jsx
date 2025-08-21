@@ -10,7 +10,7 @@ function Footer() {
     }
 
     return (
-        <div className="w-full flex flex-col bg-indigo-950">
+        <div className="w-full flex flex-col bg-indigo-950" data-aos="fade-up">
             <div className="w-full flex flex-col items-center text-justify p-10 gap-y-5">
                 <p className="text-2xl font-bold bg-linear-to-r from-cyan-500 to-violet-500 bg-clip-text text-transparent">Sergio Martínez</p>
                 <p className="w-150 text-white">Desarrollador Full Stack apasionado por crear soluciones web innovadoras y experiencias digitales excepcionales que impacten positivamente a los usuarios.</p>

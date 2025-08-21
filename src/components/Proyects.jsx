@@ -36,11 +36,11 @@ function Proyects({ id }) {
     ];
     return (
         <div id={id} className="mt-10 mb-20 flex flex-col w-full items-center">
-            <div className="w-200 text-center">
+            <div className="w-200 text-center"  data-aos="fade-up">
                 <h4 className="text-3xl font-bold">Proyectos Destacados</h4>
                 <p className="text-gray-500">Una selección de mis proyectos más recientes que demuestran mis habilidades y experiencia</p>
             </div>
-            <div className='flex flex-col w-full items-center mt-10'>
+            <div className='flex flex-col w-full items-center mt-10' data-aos="fade-right">
                 {infoProyects.map((proyecto, index) => 
                 <ViewProyects key={index} image={proyecto.image} title={proyecto.title} description={proyecto.description} tecnology1={proyecto.tecnology1} tecnology2={proyecto.tecnology2} tecnology3={proyecto.tecnology3} tecnology4={proyecto.tecnology4} code={proyecto.code} link={proyecto.link} />
             )}

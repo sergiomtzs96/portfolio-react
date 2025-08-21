@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 const Navbar = () => {
     return (
         <nav>
-            <div className='flex items-center p-2 border-b border-gray-300'>
+            <div className='flex items-center p-2 border-b border-gray-300' data-aos="fade-right">
                 <div className='ml-30'>
                     <a className='hover:text-blue-500' href=""><h1 className='font-bold text-2xl'>Sergio</h1></a>
                 </div>

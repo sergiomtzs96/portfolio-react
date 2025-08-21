@@ -5,7 +5,14 @@ import Proyects from './components/Proyects';
 import Skills from './components/Skills';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import 'aos/dist/aos.css';
+import AOS from 'aos';
+import { useEffect } from 'react';
 function App() {
+  
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
 
   return (
     <>
