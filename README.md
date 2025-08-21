@@ -1,12 +1,25 @@
-# React + Vite
+# 🌐 Portafolio - Sergio Martínez
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bienvenido a mi portafolio personal.  
+Este proyecto está desarrollado para mostrar mis habilidades como **Desarrollador Web**, incluyendo proyectos, tecnologías y experiencia en la creación de aplicaciones modernas y funcionales.  
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Tecnologías utilizadas
+- **Frontend:** React, TailwindCSS  
+- **Backend:** Node.js   
+- **Otros:** Git, GitHub 
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📸 Vista previa
+<p align="center">
+<img src="https://private-user-images.githubusercontent.com/144632086/480586151-b213c4bf-b8e4-4ad8-bad3-d59f3c8b63ce.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTU4MTYyMTQsIm5iZiI6MTc1NTgxNTkxNCwicGF0aCI6Ii8xNDQ2MzIwODYvNDgwNTg2MTUxLWIyMTNjNGJmLWI4ZTQtNGFkOC1iYWQzLWQ1OWYzYzhiNjNjZS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwODIxJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDgyMVQyMjM4MzRaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1mMDBlMjkxNjVhODlkNzkzZTkyZjkyYmY0YWZmOGYwNmYyNjZhNWYxZGFjYTRhMDJjODMxZTk2MGMxOGQwMTAzJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.B_CLJMgAhuXpiMNsLJpzx028mBk7lmGBY10KeXpkJLA" alt="portafolio react" width="450" />
+</p>
+---
+
+## 🚀 Características
+- Diseño moderno y minimalista 🎨  
+- Animaciones con TailwindCSS ✨  
+- Secciones de presentación, proyectos, contacto 📂  
+- Proximamente: Responsive (adaptado a móvil y escritorio) 📱  
