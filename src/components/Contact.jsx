@@ -6,18 +6,27 @@ import FormContact from './FormContact';
 
 function Contact() {
 
-    return(
-        <div className="w-full flex flex-col items-center mb-20">
-            <p className="font-bold text-3xl">Contacto</p>
-            <p className="text-gray-500">¿Tienes un proyecto en mente? !Me encantaría saber de ti y colaborar juntos!</p>
-            <div className="w-200 flex flex-col items-start mt-10">
+    const dates = {
+        email: 'sergiomtzs96@gmail.com',
+        phone: '656644312',
+        ubi: 'Madrid, España',
+
+    }
+
+    return (
+        <div id='contact' className="w-full flex flex-col items-center mb-20">
+            <div className='w-200 text-center'>
+                <p className="font-bold text-3xl">Contacto</p>
+                <p className="text-gray-500">¿Tienes un proyecto en mente? !Me encantaría saber de ti y colaborar juntos!</p>
+            </div>
+            <div className="w-200 flex flex-col text-center mt-10">
                 <p className="text-2xl font-bold">Hablemos</p>
-                <p className="text-justify mt-5 text-gray-500">Estoy siempre abierto a discutir nuevas oportunidades, proyectos interesantes o simplemente charlar sobre tecnología y desarrollo web</p>
+                <p className="mt-5 text-gray-500">Estoy siempre abierto a discutir nuevas oportunidades, proyectos interesantes o simplemente charlar sobre tecnología y desarrollo web</p>
             </div>
             <div>
-                <InfoContact img={email} title="Email" date="hola@miportafolio.com" color="blue" />
-                <InfoContact img={phone} title="Teléfono" date="123456789" color="green" />
-                <InfoContact img={location} title="Ubicación" date="Madrid, España" color="violet" />
+                <InfoContact img={email} title="Email" date={dates.email} color="blue" />
+                <InfoContact img={phone} title="Teléfono" date={dates.phone} color="green" />
+                <InfoContact img={location} title="Ubicación" date={dates.ubi} color="violet" />
             </div>
             <div>
                 <FormContact />

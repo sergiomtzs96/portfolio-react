@@ -2,7 +2,7 @@
 
 function FormContact() {
     return (
-        <div className="mt-20 border-1 border-gray-100 rounded-lg shadow-lg p-6 w-150">
+        <div className="mt-20 border-1 border-gray-100 rounded-lg shadow-lg p-6 w-200">
             <div className="flex text-center justify-center">
                 <p className="text-xl font-bold">Envíame un mensaje</p>
             </div>
