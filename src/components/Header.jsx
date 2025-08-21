@@ -4,6 +4,7 @@ import github from '../img/github.svg';
 import linkedin from '../img/linkedin.svg';
 import email from '../img/email.svg';
 import arrowDown from '../img/arrowdown.svg';
+import cv from '../img/CV SERGIO DAW DEFINITIVO.pdf';
 // If you get an error with the above import, try the following instead:
 // const sergio = require('../img/sergio-color.png');
 
@@ -25,7 +26,7 @@ const Header = () => {
                     <a href="#contact">Contacto</a>
                 </div>
                 <div>
-                    <button className='flex gap-3 bg-gray-100 p-4 rounded-xl pr-8 pl-8 hover:shadow-lg hover:bg-gray-200 transform-transition duration-300 ease-in-out'><img className='w-6' src={download} alt="descarga" />Descargar CV</button>
+                    <a href={cv} download className='flex gap-3 bg-gray-100 p-4 rounded-xl pr-8 pl-8 hover:shadow-lg hover:bg-gray-200 transform-transition duration-300 ease-in-out'><img className='w-6' src={download} alt="descarga" />Descargar CV</a>
                 </div>
             </div>
             <div className='flex gap-8 mt-5 items-center'>
