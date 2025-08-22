@@ -23,20 +23,20 @@ function Skills() {
             { name: "CI/CD", porcentaje: "40%", color: "violet" },
         ];
     return (
-        <div id="skills" className="flex flex-col justify-center items-center w-full">
-            <div className="flex flex-col items-center mb-10 w-200" data-aos="fade-up">
+        <div id="skills" className="flex flex-col items-center w-full">
+            <div className="flex flex-col items-center mb-10 text-center w-full" data-aos="fade-up">
                 <h4 className="text-3xl font-bold">Habilidades Técnicas</h4>
                 <p className="text-gray-500">Tecnologías y herramientas que domino para crear soluciones completas</p>
             </div>
-            <div data-aos="fade-left">
+            <div className="w-full p-4 lg:w-200" data-aos="fade-left">
                 <ContainerSkills title="Frontend" skills={frontSkills} img="blue" />
                 <ContainerSkills title="Backend" skills={backSkills} img="green" />
                 <ContainerSkills title="DevOps & Herramientas" skills={designSkills} img="violet" />
             </div>
 
-            <div className="flex flex-col items-center border-1 border-gray-100 rounded-lg shadow-lg w-200 mb-50" data-aos="fade-left">
+            <div className="flex flex-col items-center border-1 border-gray-100 rounded-lg shadow-lg w-full mb-50 p-2 lg:w-200" data-aos="fade-left">
                 <p className="text-2xl font-bold mt-5">Herramientas y Software</p>
-                <div className="grid grid-cols-3 grid-rows-4 gap-7 mt-5 mb-5 w-180" data-aos="fade-down">
+                <div className="grid grid-cols-3 grid-rows-4 gap-7 mt-5 mb-5 w-full p-4" data-aos="fade-down">
                     <BtnSoft herramienta="VS Code" uso="Editor" />
                     <BtnSoft herramienta="Figma" uso="Design" />
                     <BtnSoft herramienta="Postman" uso="API" />

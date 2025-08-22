@@ -2,13 +2,13 @@
 
 function FormContact() {
     return (
-        <div className="mt-20 border-1 border-gray-100 rounded-lg shadow-lg p-6 w-200">
+        <div className="mt-20 border-1 border-gray-100 rounded-lg shadow-lg p-6 w-full">
             <div className="flex text-center justify-center">
                 <p className="text-xl font-bold">Envíame un mensaje</p>
             </div>
             <div>
                 <form action="POST">
-                    <div className="flex gap-4 mt-5 justify-between">
+                    <div className="flex flex-col gap-4 mt-5 justify-between">
                         <div className="gap-1 flex flex-col mt-3 w-full ">
                             <label htmlFor="Name" className="font-bold text-sm">Nombre</label>
                             <input type="text" placeholder="Tu nombre" className="border-1 border-gray-200 rounded-lg p-2" />

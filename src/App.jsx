@@ -9,21 +9,23 @@ import 'aos/dist/aos.css';
 import AOS from 'aos';
 import { useEffect } from 'react';
 function App() {
-  
+
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
   }, []);
 
   return (
-    <>
-     <Navbar />
-     <Header id="header" />
-     <AboutMe id="aboutme" />
-     <Proyects id="proyects" />
-     <Skills id="skills" />
-     <Contact id="contact" />
-     <Footer />
-    </>
+    <div className='w-full flex flex-col'>
+      <div  className=' w-full flex flex-col justify-between max-w-300 mx-auto'>
+        <Navbar />
+        <Header id="header" />
+        <AboutMe id="aboutme" />
+        <Proyects id="proyects" />
+        <Skills id="skills" />
+        <Contact id="contact" />
+      </div>
+      <Footer />
+    </div>
   )
 }
 

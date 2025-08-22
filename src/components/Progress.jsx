@@ -9,7 +9,7 @@ function Progress({name, porcentaje, color}) {
     };
 
     return (
-        <div className='w-full pl-10 pr-10'>
+        <div className='w-full p-5'>
             <div className='flex justify-between mb-1 text-base font-medium items-center'>
                 <div><p>{name}</p></div>
                 <div>
