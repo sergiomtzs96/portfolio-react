@@ -15,7 +15,7 @@ function App() {
   }, []);
 
   return (
-    <div className='w-full flex flex-col'>
+    <div>
       <div  className=' w-full flex flex-col justify-between max-w-300 mx-auto'>
         <Navbar />
         <Header id="header" />
