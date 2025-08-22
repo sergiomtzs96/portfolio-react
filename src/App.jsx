@@ -16,7 +16,7 @@ function App() {
 
   return (
     <div>
-      <div  className=' w-full flex flex-col justify-between max-w-300 mx-auto'>
+      <div  className=' w-full flex flex-col justify-between max-w-7xl mx-auto overflow-x-hidden'>
         <Navbar />
         <Header id="header" />
         <AboutMe id="aboutme" />

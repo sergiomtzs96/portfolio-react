@@ -37,7 +37,7 @@ function Proyects({ id }) {
         }
     ];
     return (
-        <div id={id} className="mt-10 mb-20 flex flex-col w-full items-center">
+        <div id={id} className="mt-10 mb-20 flex flex-col w-full items-center mx-auto">
             <div className="w-full text-center"  data-aos="fade-up">
                 <h4 className="text-3xl font-bold">Proyectos Destacados</h4>
                 <p className="text-gray-500">Una selección de mis proyectos más recientes que demuestran mis habilidades y experiencia</p>

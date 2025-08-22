@@ -9,7 +9,7 @@ function InfoContact({img, title, date, color}) {
     }
 
     return(
-        <div className='bg-gray-50 flex gap-5 items-center p-2 w-full mt-5 rounded-lg hover:scale-110 hover:shadow-lg transform-transition duration-300 ease-in-out'>
+        <div className='bg-gray-50 flex gap-5 items-center p-2 w-full mt-5 rounded-lg hover:scale-110 hover:shadow-lg transition duration-300 ease-in-out'>
             <div className={`rounded-lg ${colorClasses[color]}`}>
                 <img className='w-16 p-3' src={img} alt="email" />
             </div>
