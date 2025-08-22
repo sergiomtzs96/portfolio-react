@@ -30,9 +30,9 @@ const AboutMe = () => {
             </div>
             <div className='w-full flex items-center justify-center gap-3' data-aos="fade-right">
                 <div className='flex flex-col lg:flex-row gap-5 justify-between w-full lg:max-w-2xl'>
-                    <Stats icon={users} value="50+" description="Proyectos completados" />
-                    <Stats icon={medal} value="5+" description="Años de experiencia" />
-                    <Stats icon={coffee} value="20000" description="Tazas de café" />
+                    <Stats icon={users} value="3" description="Proyectos completados" />
+                    <Stats icon={medal} value="2" description="Años de experiencia" />
+                    <Stats icon={coffee} value="20.000" description="Tazas de café" />
                 </div>
             </div>
             <div className='w-full flex flex-col items-center p-3' data-aos="fade-left">

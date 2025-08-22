@@ -16,8 +16,8 @@ function Progress({name, porcentaje, color}) {
                     <p className={`p-1 rounded-full text-white ${colorClasses[color]}`}  >{porcentaje}</p>
                 </div>
             </div>
-            <div className='w-full bg-gray-200 rounded-full h-2.5 mb-4 dark:bg-gray-700 mt-4'>
-                <div className={`h-2.5 rounded-full ${colorClasses[color]}`} style={{width: porcentaje }} ></div>
+            <div className='w-full bg-gray-200 rounded-full h-3 mb-4 dark:bg-gray-700 mt-4'>
+                <div className={`h-3 rounded-full ${colorClasses[color]}`} style={{width: porcentaje }} ></div>
             </div>
         </div>
 

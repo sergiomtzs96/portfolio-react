@@ -10,7 +10,7 @@ function Proyects({ id }) {
             image: portfolioImg,
             tecnology1: 'React',
             tecnology2: 'Node.js',
-            tecnology3: 'Tailwind CSS',
+            tecnology3: 'Tailwind',
             tecnology4: 'JavaScript',
             code: 'https://github.com/sergiomtzs96/portfolio-react'
         },
