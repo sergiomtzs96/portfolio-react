@@ -1,9 +1,31 @@
 import ViewProyects from './ViewProyects';
 import portfolioImg from '../img/portfolio.png';
 import portfolioBasic from '../img/basic portfolio.png';
+import imageInventory from '../img/imageHomeInventory.jpeg';
+import imageRohigarnez from '../img/imageRohigarnez.png';
 
 function Proyects({ id }) {
     const infoProyects = [
+        {
+            title: 'Web Rohigarnez S.L.',
+            description: 'Desarrollo de sitio web corporativo con información de servicios, contacto y galería de proyectos.',
+            image: imageRohigarnez,
+            tecnology1: 'React.js',
+            tecnology2: 'JavaScript',
+            tecnology3: 'MongoDB',
+            tecnology4: 'IA',
+            code: null
+        },
+        {
+            title: 'Home Inventory',
+            description: 'Aplicación web full stack para la gestión del inventario doméstico y la lista de compra. Permite controlar productos, filtrar por ubicación o categoría y recibir alertas de caducidad, ayudando a organizar mejor el hogar y reducir el desperdicio. Desarrollada con React (frontend), Node.js y Express (backend) y MongoDB (base de datos). Incluye autenticación segura con JWT, CRUD completo y diseño responsive con TailwindCSS.',
+            image: imageInventory,
+            tecnology1: 'React.js',
+            tecnology2: 'Node.js',
+            tecnology3: 'Express',
+            tecnology4: 'MongoDB',
+            code: 'https://github.com/sergiomtzs96/home-inventory'
+        },
         {
             title: 'Portfolio with React',
             description: 'Portafolio personal con React. Es esta web en la que estás navegando',
