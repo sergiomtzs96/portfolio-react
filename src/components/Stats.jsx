@@ -1,7 +1,7 @@
 
 
-const Stats = ({icon, value, description}) => {
-    return(
+export default function Stats({ icon, value, description }) {
+    return (
         <div>
             <div className='flex flex-col items-center text-center'>
                 <img className='w-8 mb-3' src={icon} alt="icono" />
@@ -12,4 +12,3 @@ const Stats = ({icon, value, description}) => {
     )
 }
 
-export default Stats;

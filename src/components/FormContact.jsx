@@ -1,6 +1,6 @@
 
 
-function FormContact() {
+export default function FormContact() {
     return (
         <div className="mt-20 border border-gray-100 rounded-lg shadow-lg p-6 w-full">
             <div className="flex text-center justify-center">
@@ -35,4 +35,3 @@ function FormContact() {
     )
 }
 
-export default FormContact;

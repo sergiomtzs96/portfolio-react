@@ -1,5 +1,5 @@
-const Campos = ( {icon, campo, description} ) => {
-    return(
+export default function Campos({ icon, campo, description }) {
+    return (
         <div className='flex flex-col items-center mt-10'>
             <div className='flex flex-col items-center text-center border border-gray-200 w-full rounded-xl p-6 hover:shadow-lg transition duration-300 ease-in-out'>
                 <img className='w-12' src={icon} alt="icono" />
@@ -10,4 +10,3 @@ const Campos = ( {icon, campo, description} ) => {
     )
 }
 
-export default Campos;

@@ -1,6 +1,6 @@
 
 
-function Progress({name, porcentaje, color}) {
+export default function Progress({ name, porcentaje, color }) {
 
     const colorClasses = {
         blue: "bg-blue-500",
@@ -17,11 +17,10 @@ function Progress({name, porcentaje, color}) {
                 </div>
             </div>
             <div className='w-full bg-gray-200 rounded-full h-3 mb-4 dark:bg-gray-700 mt-4'>
-                <div className={`h-3 rounded-full ${colorClasses[color]}`} style={{width: porcentaje }} ></div>
+                <div className={`h-3 rounded-full ${colorClasses[color]}`} style={{ width: porcentaje }} ></div>
             </div>
         </div>
 
     )
 }
 
-export default Progress;

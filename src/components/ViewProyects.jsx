@@ -1,6 +1,6 @@
 import github from '../img/github.svg';
 import ventana from '../img/window.svg';
-const ViewProyects = ({image, title, description, tecnology1, tecnology2, tecnology3, tecnology4, link, code}) => {
+export default function ViewProyects({ image, title, description, tecnology1, tecnology2, tecnology3, tecnology4, link, code }) {
     return (
         <div className='mt-10 w-full p-3 lg:max-w-2xl'>
             <div className='group relative overflow-hidden w-full border border-gray-300 rounded-xl shadow-xl'>
@@ -28,4 +28,3 @@ const ViewProyects = ({image, title, description, tecnology1, tecnology2, tecnol
     )
 }
 
-export default ViewProyects;

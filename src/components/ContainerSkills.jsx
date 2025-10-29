@@ -3,7 +3,7 @@ import azul from '../img/azul.svg';
 import green from '../img/green.svg';
 import morado from '../img/morado.svg';
 
-function ContainerSkills({ title, skills, img }) {
+export default function ContainerSkills({ title, skills, img }) {
 
     const images = {
         blue: azul,
@@ -16,8 +16,8 @@ function ContainerSkills({ title, skills, img }) {
         green: "shadow-green-500",
         violet: "shadow-violet-500"
     };
-    
-    
+
+
     return (
         <div className='mb-10 flex flex-col items-center shadow-lg rounded-lg'>
             <div className='flex flex-col items-center border border-gray-100 rounded-lg w-full'>
@@ -38,4 +38,3 @@ function ContainerSkills({ title, skills, img }) {
     )
 }
 
-export default ContainerSkills;

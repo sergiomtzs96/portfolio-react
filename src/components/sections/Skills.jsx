@@ -1,27 +1,27 @@
-import ContainerSkills from "./ContainerSkills";
-import BtnSoft from "./BtnSoft";
+import ContainerSkills from "../ContainerSkills";
+import BtnSoft from "../BtnSoft";
 
 
 
-function Skills() {
+export default function Skills() {
     const frontSkills = [
-            { name: "React", porcentaje: "60%", color: "blue"},
-            { name: "Bootstrap", porcentaje: "95%", color: "blue" },
-            { name: "JavaScript", porcentaje: "80%", color: "blue" },
-            { name: "TailwindCSS", porcentaje: "85%", color: "blue" },
-        ];
-        const backSkills = [
-            { name: "Node.js", porcentaje: "60%", color: "green" },
-            { name: "Java", porcentaje: "70%", color: "green" },
-            { name: "SQL", porcentaje: "85%", color: "green" },
-            { name: "PHP", porcentaje: "80%", color: "green" },
-        ];
-        const designSkills = [
-            { name: "Docker", porcentaje: "50%", color: "violet" },
-            { name: "AWS/GCP", porcentaje: "30%", color: "violet" },
-            { name: "Git/GitHub", porcentaje: "95%", color: "violet" },
-            { name: "CI/CD", porcentaje: "40%", color: "violet" },
-        ];
+        { name: "React", porcentaje: "60%", color: "blue" },
+        { name: "Bootstrap", porcentaje: "95%", color: "blue" },
+        { name: "JavaScript", porcentaje: "80%", color: "blue" },
+        { name: "TailwindCSS", porcentaje: "85%", color: "blue" },
+    ];
+    const backSkills = [
+        { name: "Node.js", porcentaje: "60%", color: "green" },
+        { name: "Java", porcentaje: "70%", color: "green" },
+        { name: "SQL", porcentaje: "85%", color: "green" },
+        { name: "PHP", porcentaje: "80%", color: "green" },
+    ];
+    const designSkills = [
+        { name: "Docker", porcentaje: "50%", color: "violet" },
+        { name: "AWS/GCP", porcentaje: "30%", color: "violet" },
+        { name: "Git/GitHub", porcentaje: "95%", color: "violet" },
+        { name: "CI/CD", porcentaje: "40%", color: "violet" },
+    ];
     return (
         <div id="skills" className="flex flex-col items-center w-full mx-auto">
             <div className="flex flex-col items-center mb-10 text-center w-full" data-aos="fade-up">
@@ -53,4 +53,3 @@ function Skills() {
     )
 }
 
-export default Skills;

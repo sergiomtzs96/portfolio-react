@@ -1,14 +1,14 @@
-import code from '../img/code.jpg';
-import Stats from '../components/Stats.jsx'
-import Campos from '../components/Campos.jsx';
-import users from '../img/users.svg';
-import coffee from '../img/coffee.svg';
-import medal from '../img/medal.svg';
-import coding from '../img/coding.svg';
-import ray from '../img/ray.svg';
-import palette from '../img/palette.svg';
+import code from '../../img/code.jpg';
+import Stats from '../Stats.jsx'
+import Campos from '../Campos.jsx';
+import users from '../../img/users.svg';
+import coffee from '../../img/coffee.svg';
+import medal from '../../img/medal.svg';
+import coding from '../../img/coding.svg';
+import ray from '../../img/ray.svg';
+import palette from '../../img/palette.svg';
 
-const AboutMe = () => {
+export default function AboutMe() {
     return (
         <div id='aboutme' className="mt-20 mb-10 w-full mx-auto" data-aos="fade-up">
             <div className='flex flex-col w-full items-center p-10 text-center'>
@@ -22,7 +22,7 @@ const AboutMe = () => {
             </div>
             <div className='flex flex-col items-center text-justify p-10 w-full' data-aos="fade-down">
                 <div className='w-full '>
-                    <h5 className='text-2xl font-bold'>Mi historia</h5>
+                    <h5 className='text-2xl font-bold text-center'>Mi historia</h5>
                     <p className='mt-5'> Comencé mi viaje en el desarrollo web hace más de 5 años. Mi pasión por resolver problemas complejos y crear experiencias digitales excepcionales me ha llevado a especializarme en tecnologías modernas como React, Node.js y cloud computing.
 
                         Me encanta trabajar en proyectos desafiantes donde puedo combinar creatividad con tecnología para crear soluciones que realmente impacten a los usuarios. </p>
@@ -45,5 +45,3 @@ const AboutMe = () => {
         </div>
     )
 }
-
-export default AboutMe;

@@ -1,10 +1,10 @@
-import Navbar from './components/Navbar';
-import Header from './components/Header'
-import AboutMe from './components/AboutMe';
-import Proyects from './components/Proyects';
-import Skills from './components/Skills';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+import Navbar from './components/sections/Navbar';
+import Header from './components/sections/Header'
+import AboutMe from './components/sections/AboutMe';
+import Proyects from './components/sections/Proyects';
+import Skills from './components/sections/Skills';
+import Contact from './components/sections/Contact';
+import Footer from './components/sections/Footer';
 import 'aos/dist/aos.css';
 import AOS from 'aos';
 import { useEffect } from 'react';
@@ -16,7 +16,7 @@ function App() {
 
   return (
     <div>
-      <div  className=' w-full flex flex-col justify-between max-w-7xl mx-auto overflow-x-hidden'>
+      <div className="w-full flex flex-col max-w-7xl mx-auto overflow-x-hidden overflow-y-visible">
         <Navbar />
         <Header id="header" />
         <AboutMe id="aboutme" />

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 
 
-const Navbar = () => {
+export default function Navbar() {
 
   const [open, setOpen] = useState(false);
 
@@ -91,4 +91,3 @@ const Navbar = () => {
   )
 }
 
-export default Navbar;

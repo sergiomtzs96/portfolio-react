@@ -1,10 +1,10 @@
-import InfoContact from './InfoContact';
-import email from '../img/email-contact.svg';
-import phone from '../img/phone-contact.svg';
-import location from '../img/location-contact.svg';
-import FormContact from './FormContact';
+import InfoContact from '../InfoContact';
+import email from '../../img/email-contact.svg';
+import phone from '../../img/phone-contact.svg';
+import location from '../../img/location-contact.svg';
+import FormContact from '../FormContact';
 
-function Contact() {
+export default function Contact() {
 
     const dates = {
         email: 'sergiomtzs96@gmail.com',
@@ -35,4 +35,3 @@ function Contact() {
     )
 }
 
-export default Contact;

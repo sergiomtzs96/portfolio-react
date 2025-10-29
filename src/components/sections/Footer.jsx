@@ -1,6 +1,6 @@
 
 
-function Footer() {
+export default function Footer() {
 
     const dates = {
         email: 'sergiomtzs96@gmail.com',
@@ -51,4 +51,3 @@ function Footer() {
     )
 }
 
-export default Footer;
