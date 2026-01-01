@@ -227,3 +227,7 @@ h3 {
     @apply bg-background text-foreground;
     }
 }
+
+h2 {
+    size: 20px;
+}
