@@ -23,18 +23,18 @@ export default function Skills() {
         { name: "CI/CD", porcentaje: "40%", color: "violet" },
     ];
     return (
-        <div id="skills" className="flex flex-col items-center w-full mx-auto">
+        <div id="skills" className="flex flex-col items-center w-full mx-auto bg-gray-100 p-4">
             <div className="flex flex-col items-center mb-10 text-center w-full" data-aos="fade-up">
                 <h4 className="text-3xl font-bold">Habilidades Técnicas</h4>
                 <p className="text-gray-500">Tecnologías y herramientas que domino para crear soluciones completas</p>
             </div>
-            <div className="w-full p-4 lg:max-w-2xl" data-aos="fade-left">
+            <div className="w-full p-4 grid grid-cols-2 max-w-7xl gap-4" data-aos="fade-left">
                 <ContainerSkills title="Frontend" skills={frontSkills} img="blue" />
                 <ContainerSkills title="Backend" skills={backSkills} img="green" />
                 <ContainerSkills title="DevOps & Herramientas" skills={designSkills} img="violet" />
             </div>
 
-            <div className="flex flex-col items-center border border-gray-100 rounded-lg shadow-lg w-full mx-auto mb-20 p-2 lg:max-w-2xl" data-aos="fade-left">
+            <div className="flex flex-col items-center border border-gray-100 rounded-lg shadow-lg w-full mx-auto mb-20 p-2 max-w-7xl" data-aos="fade-left">
                 <p className="text-2xl font-bold mt-5">Herramientas y Software</p>
                 <div className="grid grid-cols-2 grid-rows-4 gap-3 mt-5 mb-5 w-full p-2" data-aos="fade-down">
                     <BtnSoft herramienta="VS Code" uso="Editor" />

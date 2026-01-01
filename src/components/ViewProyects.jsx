@@ -2,10 +2,10 @@ import github from '../img/github.svg';
 import ventana from '../img/window.svg';
 export default function ViewProyects({ image, title, description, tecnology1, tecnology2, tecnology3, tecnology4, link, code }) {
     return (
-        <div className='mt-10 w-full p-3 lg:max-w-2xl'>
-            <div className='group relative overflow-hidden w-full border border-gray-300 rounded-xl shadow-xl'>
+        <div className='mt-10 w-full flex flex-col  p-3 lg:max-w-2xl'>
+            <div className='flex flex-col h-full group relative overflow-hidden w-full border border-gray-300 rounded-xl shadow-xl'>
                 <img className='rounded-t-xl object-cover group-hover:scale-110 transition duration-300 ease-in-out w-full h-80' src={image} alt="proyecto" />
-                <div className='mt-5 p-4'>
+                <div className='mt-5 p-4 flex flex-col h-full justify-between'>
                     <p className='font-bold text-xl'>{title}</p>
                     <p className='text-gray-500 mt-3'>{description}</p>
                     <div className='flex gap-4 mt-3 w-full'>

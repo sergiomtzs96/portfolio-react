@@ -64,7 +64,7 @@ export default function Proyects({ id }) {
                 <h4 className="text-3xl font-bold">Proyectos Destacados</h4>
                 <p className="text-gray-500">Una selección de mis proyectos más recientes que demuestran mis habilidades y experiencia</p>
             </div>
-            <div className='flex flex-col w-full items-center justify-center mt-10' data-aos="fade-right">
+            <div className='grid grid-cols-2 h-full ' data-aos="fade-right">
                 {infoProyects.map((proyecto, index) =>
                     <ViewProyects key={index} image={proyecto.image} title={proyecto.title} description={proyecto.description} tecnology1={proyecto.tecnology1} tecnology2={proyecto.tecnology2} tecnology3={proyecto.tecnology3} tecnology4={proyecto.tecnology4} code={proyecto.code} link={proyecto.link} />
                 )}

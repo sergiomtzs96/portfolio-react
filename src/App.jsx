@@ -16,7 +16,7 @@ function App() {
 
   return (
     <div>
-      <div className="w-full flex flex-col max-w-7xl mx-auto overflow-x-hidden overflow-y-visible">
+      <div>
         <Navbar />
         <Header id="header" />
         <AboutMe id="aboutme" />

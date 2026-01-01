@@ -14,7 +14,7 @@ export default function InfoContact({ img, title, date, color }) {
                 <img className='w-16 p-3' src={img} alt="email" />
             </div>
             <div className='flex flex-col'>
-                <p className='font-bold text-xl'>{title}</p>
+                <p className='font-bold text-xl text-start'>{title}</p>
                 <p className='text-gray-500 text-lg'>{date}</p>
             </div>
         </div>
