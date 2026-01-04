@@ -28,7 +28,7 @@ export default function Skills() {
                 <h4 className="text-3xl font-bold">Habilidades Técnicas</h4>
                 <p className="text-gray-500">Tecnologías y herramientas que domino para crear soluciones completas</p>
             </div>
-            <div className="w-full p-4 grid grid-cols-2 max-w-7xl gap-4" data-aos="fade-left">
+            <div className="w-full flex flex-col p-4 md:grid md:grid-cols-2 max-w-7xl gap-4" data-aos="fade-left">
                 <ContainerSkills title="Frontend" skills={frontSkills} img="blue" />
                 <ContainerSkills title="Backend" skills={backSkills} img="green" />
                 <ContainerSkills title="DevOps & Herramientas" skills={designSkills} img="violet" />

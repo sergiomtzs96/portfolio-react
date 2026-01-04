@@ -54,13 +54,13 @@ export default function AboutMe() {
 
     return (
         <div className='bg-[#11057E]'>
-            <div id='aboutme' className="grid grid-cols-2 grid-rows-1 gap-4 w-full mx-auto px-6" data-aos="fade-up">
-                <div className='flex flex-col h-full justify-center'>
-                    <div style={{ width: '50vw', height: '100vh' }}>
+            <div id='aboutme' className="md:grid md:grid-cols-2 md:grid-rows-1 md:gap-4 md:w-full md:mx-auto md:px-6" data-aos="fade-up">
+                <div className='flex flex-col h-full justify-center w-full'>
+                    <div className='hidden md:block' style={{ width: '50vw', height: '100vh' }}>
                         <DomeGallery />
                     </div>
                 </div>
-                <div className='flex flex-col items-center text-justify p-10 w-full'>
+                <div className='flex flex-col justify-center items-center text-justify md:p-10 w-full'>
                     <Card className={'bg-[#11057E] text-white'}>
                         <CardHeader>
                             <CardTitle className={'flex flex-col gap-4 space-y-4'}>
@@ -71,7 +71,7 @@ export default function AboutMe() {
                             </CardTitle>
                         </CardHeader>
                         <CardContent>
-                            <div className='w-full flex items-center justify-center gap-3 pb-6 h-50' data-aos="fade-right">
+                            <div className='flex flex-col w-full md:flex items-center justify-center gap-3 pb-6 md:h-50' data-aos="fade-right">
                                 {data.map((data, j) => (
                                     <Card className={'w-full h-full justify-between'}>
                                         <CardHeader>

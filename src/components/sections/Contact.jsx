@@ -19,7 +19,7 @@ export default function Contact() {
                 <p className="font-bold text-3xl">Contacto</p>
                 <p className="text-gray-500">¿Tienes un proyecto en mente? !Me encantaría saber de ti y colaborar juntos!</p>
             </div>
-            <div className='grid grid-cols-2 max-w-7xl gap-6'>
+            <div className='flex flex-col md:grid md:grid-cols-2 max-w-7xl gap-6'>
                 <div className='flex flex-col h-full'>
                     <div className="w-full flex flex-col text-center mt-10 justify-center h-full" data-aos="fade-down">
                         <p className="text-2xl font-bold">Hablemos</p>

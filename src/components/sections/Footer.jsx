@@ -13,7 +13,7 @@ export default function Footer() {
 
     return (
         <div className="bg-[var(--primary)]">
-            <div className="grid grid-cols-3 p-10 w-full mx-auto gap-8">
+            <div className="md:grid grid-cols-3 p-10 w-full mx-auto gap-8">
                 <div className="flex flex-col max-w-xl h-full items-center justify-center">
                     <TextType
                         text={["Sergio Martínez", "Desarrollador Full Stack"]}
@@ -21,7 +21,7 @@ export default function Footer() {
                         pauseDuration={1500}
                         showCursor={true}
                         cursorCharacter="|"
-                        className={'text-2xl font-bold bg-gradient-to-r from-cyan-500 to-violet-500 bg-clip-text text-transparent'}
+                        className={'pb-10 text-2xl font-bold bg-gradient-to-r from-cyan-500 to-violet-500 bg-clip-text text-transparent sm:pt-10'}
                     />
 
                     <GradientText
@@ -62,7 +62,7 @@ export default function Footer() {
             <div className="max-w-7xl mx-auto">
                 <hr className="text-white" />
             </div>
-            <div className="flex flex-col items-center text-center py-6">
+            <div className="flex flex-col items-center text-center py-6 px-4">
                 <p className="flex gap-4 items-center text-center text-white">© Sergio Martínez. Hecho con <span><Heart color="red" size={16} /></span> y React + TailwindCSS </p>
                 <a className="mt-4 flex justify-center animate-bounce bg-indigo-400 p-2 rounded-lg text-gray-300" href="#header"><ArrowUp /></a>
             </div>

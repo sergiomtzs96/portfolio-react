@@ -12,34 +12,36 @@ import Particles from '../gsap/Particles.jsx';
 export default function Header() {
     return (
         <div>
-            <div id="header" className='grid grid-cols-2 grid-rows-1 gap-4 items-center text-center w-full flex  min-h-screen place-items-center px-10 bg-gray-100'>
-            <div className='absolute ' style={{ width: '100%', height: '800px', position: 'absolute' }}>
-                <Particles
-                    particleColors={['#444444ff', '#0a0a0aff']}
-                    particleCount={200}
-                    particleSpread={10}
-                    speed={0.1}
-                    particleBaseSize={200}
-                    moveParticlesOnHover={true}
-                    alphaParticles={false}
-                    disableRotation={false}
-                />
-            </div>
-                <div className='flex flex-col space-y-20'>
+            <div id="header" className=' md:grid md:grid-cols-2 md:grid-rows-1 md:gap-4 md:items-center md:text-center w-full flex min-h-screen place-items-center md:px-10 bg-white pt-20'>
+                <div className='absolute overflow-hidden' style={{ width: '100%', height: '800px', position: 'absolute' }}>
+                    <Particles
+                        particleColors={['#444444ff', '#0a0a0aff']}
+                        particleCount={200}
+                        particleSpread={10}
+                        speed={0.1}
+                        particleBaseSize={200}
+                        moveParticlesOnHover={true}
+                        alphaParticles={false}
+                        disableRotation={false}
+                    />
+                </div>
+                <div className='grid grid-cols-1  md:flex md:flex-col md:space-y-20'>
                     <div className='' data-aos="fade-up">
-                        <TextType
-                            text={["Hola, soy Sergio Martínez", "Desarrollador Full Stack", "Bienvenido a mi portafolio"]}
-                            typingSpeed={75}
-                            pauseDuration={1500}
-                            showCursor={true}
-                            cursorCharacter="|"
-                            className={'text-4xl lg:text-5xl font-bold text-gray-800 mb-4 bg-gradient-to-r from-cyan-500 to-violet-500 bg-clip-text text-transparent'}
-                        />
+                        <div className='flex items-center mx-auto text-center md:py-20 md:h-full min-h-50 max-h-50 w-30 md:w-full md:mx-auto md:justify-center'>
+                            <TextType
+                                text={["Hola, soy Sergio Martínez", "Desarrollador Full Stack", "Bienvenido a mi portafolio"]}
+                                typingSpeed={75}
+                                pauseDuration={1500}
+                                showCursor={true}
+                                cursorCharacter="|"
+                                className={'pb-10 text-4xl lg:text-5xl font-bold text-gray-800 mb-4 bg-gradient-to-r from-cyan-500 to-violet-500 bg-clip-text text-transparent'}
+                            />
+                        </div>
                         <GradientText
                             colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
                             animationSpeed={3}
                             showBorder={false}
-                            className="text-2xl text-gray-500 text-center"
+                            className="text-md md:text-2xl text-gray-500 text-center"
                         >
                             Desarrollador web especializado en crear experiencias web modernas, funcionales y visualmente atractivas
                         </GradientText>
@@ -63,7 +65,7 @@ export default function Header() {
                     </div>
                 </div>
                 <div data-aos="fade-up">
-                    <img src={sergio} alt="imagen" className='w-200 h-auto' />
+                    <img src={sergio} alt="imagen" className=' md:w-200 md:h-auto' />
                 </div>
             </div>
             <div className='mt-20 flex justify-center animate-bounce'>
