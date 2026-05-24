@@ -14,6 +14,8 @@ const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
 const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
 const RECAPTCHA_KEY = import.meta.env.VITE_RECAPTCHA_SITE_KEY;
+const HAS_EMAILJS = PUBLIC_KEY && SERVICE_ID && TEMPLATE_ID;
+const HAS_RECAPTCHA = !!RECAPTCHA_KEY;
 
 const subjects = [
   { value: "", label: "Selecciona un asunto" },
@@ -36,10 +38,17 @@ export default function Contact() {
     e.preventDefault();
     setStatus(null);
 
-    const token = recaptchaRef.current?.getValue();
-    if (!token) {
-      setStatus("error-captcha");
+    if (!HAS_EMAILJS) {
+      setStatus("error");
       return;
+    }
+
+    if (HAS_RECAPTCHA) {
+      const token = recaptchaRef.current?.getValue();
+      if (!token) {
+        setStatus("error-captcha");
+        return;
+      }
     }
 
     setSending(true);
@@ -53,14 +62,14 @@ export default function Contact() {
           from_email: form.email,
           subject: subjects.find((s) => s.value === form.subject)?.label || form.subject,
           message: form.message,
-          "g-recaptcha-response": token
+          "g-recaptcha-response": recaptchaRef.current?.getValue() || ""
         },
         PUBLIC_KEY
       );
 
       setStatus("success");
       setForm({ name: "", email: "", subject: "", message: "" });
-      recaptchaRef.current.reset();
+      recaptchaRef.current?.reset();
     } catch {
       setStatus("error");
     } finally {
@@ -167,9 +176,11 @@ export default function Contact() {
                 />
               </div>
 
-              <div className="flex justify-center mt-2">
-                <ReCAPTCHA ref={recaptchaRef} sitekey={RECAPTCHA_KEY} theme="dark" />
-              </div>
+              {HAS_RECAPTCHA && (
+                <div className="flex justify-center mt-2">
+                  <ReCAPTCHA ref={recaptchaRef} sitekey={RECAPTCHA_KEY} theme="dark" />
+                </div>
+              )}
 
               {status === "error-captcha" && (
                 <div className="flex items-center gap-2 text-amber-400 text-sm">
