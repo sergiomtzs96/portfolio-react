@@ -1,22 +1,19 @@
-import Navbar from "./components/Navbar";
-import Header from "./components/Header";
-import Skills from "./components/Skills";
-import Projects from "./components/Projects";
-import Contact from "./components/Contact";
+import { Routes, Route } from 'react-router-dom'
+import Layout from './components/Layout'
+import Home from './pages/Home'
+import ProjectHomeInventory from './pages/ProjectHomeInventory'
+import ProjectFootballStats from './pages/ProjectFootballStats'
+import ProjectRohigarnez from './pages/ProjectRohigarnez'
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-[#020040] overflow-x-hidden selection:bg-blue-300 selection:text-[#020040]">
-      <Navbar />
-      <Header />
-      <Skills />
-      <Projects />
-      <Contact />
-      
-      {/* Simple Footer */}
-      <footer className="py-8 text-center text-gray-500 text-sm border-t border-white/5 font-['Inter:Regular',sans-serif]">
-        <p>Hecho con ❤️ por Sergio Martínez</p>
-      </footer>
-    </div>
-  );
+    <Routes>
+      <Route element={<Layout />}>
+        <Route path="/" element={<Home />} />
+        <Route path="/home-inventory" element={<ProjectHomeInventory />} />
+        <Route path="/football-stats" element={<ProjectFootballStats />} />
+        <Route path="/rohigarnez" element={<ProjectRohigarnez />} />
+      </Route>
+    </Routes>
+  )
 }
