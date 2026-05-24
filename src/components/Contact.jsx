@@ -17,6 +17,7 @@ const HAS_EMAILJS = PUBLIC_KEY && SERVICE_ID && TEMPLATE_ID;
 const HAS_RECAPTCHA = !!RECAPTCHA_KEY;
 
 if (!HAS_EMAILJS) console.warn("EmailJS env vars missing");
+else emailjs.init(PUBLIC_KEY);
 
 const subjects = [
   { value: "", label: "Selecciona un asunto" },
@@ -76,8 +77,7 @@ export default function Contact() {
           subject: subjects.find((s) => s.value === form.subject)?.label || form.subject,
           message: form.message,
           "g-recaptcha-response": token
-        },
-        PUBLIC_KEY
+        }
       );
 
       setStatus("success");
