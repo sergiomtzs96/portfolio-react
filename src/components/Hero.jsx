@@ -64,10 +64,10 @@ export default function Hero() {
       </motion.div>
 
       <motion.div
-        initial={{ opacity: 0, scale: 0.95 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.8, delay: 0.2 }}
-        className="w-full lg:w-1/2 grid grid-cols-2 grid-rows-[auto_auto] gap-3 h-100"
+        initial={{ opacity: 0, x: 20 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+        className="w-full lg:w-1/2 grid grid-cols-2 gap-3"
       >
         <div className="col-span-2 border border-border bg-card flex flex-col h-auto">
           <div className="border-b border-border p-3 flex justify-between items-center bg-secondary/30">
@@ -108,8 +108,8 @@ export default function Hero() {
             <span className="text-xs font-mono text-muted-foreground">API Traffic</span>
             <Activity size={14} className="text-emerald-400" />
           </div>
-          <div className="h-12 w-full">
-            <ResponsiveContainer width="100%" height="100%">
+          <div className="h-12 w-full min-w-0">
+            <ResponsiveContainer width="100%" height={48}>
               <AreaChart data={mockData} margin={{ top: 2, right: 0, left: 0, bottom: 0 }}>
                 <defs>
                   <linearGradient id="colorRequests" x1="0" y1="0" x2="0" y2="1">
