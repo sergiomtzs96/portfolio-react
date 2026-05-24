@@ -1,8 +1,7 @@
-import { useState, useRef } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "motion/react";
 import { Mail, Phone, MapPin, Send, Github, Linkedin, Loader2, CheckCircle2, AlertCircle } from "lucide-react";
 import emailjs from "@emailjs/browser";
-import ReCAPTCHA from "react-google-recaptcha";
 
 const contactInfo = [
   { icon: Mail, label: "Escríbeme", value: "sergiomtzs96@gmail.com", href: "mailto:sergiomtzs96@gmail.com" },
@@ -15,8 +14,9 @@ const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
 const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
 const RECAPTCHA_KEY = import.meta.env.VITE_RECAPTCHA_SITE_KEY;
 const HAS_EMAILJS = PUBLIC_KEY && SERVICE_ID && TEMPLATE_ID;
-if (!HAS_EMAILJS) console.warn("EmailJS env vars missing");
 const HAS_RECAPTCHA = !!RECAPTCHA_KEY;
+
+if (!HAS_EMAILJS) console.warn("EmailJS env vars missing");
 
 const subjects = [
   { value: "", label: "Selecciona un asunto" },
@@ -29,11 +29,29 @@ export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
   const [sending, setSending] = useState(false);
   const [status, setStatus] = useState(null);
-  const recaptchaRef = useRef(null);
+  const [recaptchaLoaded, setRecaptchaLoaded] = useState(false);
+
+  useEffect(() => {
+    if (!HAS_RECAPTCHA) return;
+    if (document.getElementById("recaptcha-script")) {
+      setRecaptchaLoaded(true);
+      return;
+    }
+    const script = document.createElement("script");
+    script.id = "recaptcha-script";
+    script.src = `https://www.google.com/recaptcha/api.js?render=${RECAPTCHA_KEY}`;
+    script.onload = () => setRecaptchaLoaded(true);
+    document.head.appendChild(script);
+  }, []);
 
   const updateField = (field) => (e) => setForm((prev) => ({ ...prev, [field]: e.target.value }));
 
   const isValid = form.name.trim() && form.email.trim() && form.subject && form.message.trim();
+
+  const getRecaptchaToken = () => {
+    if (!HAS_RECAPTCHA || !window.grecaptcha) return Promise.resolve("");
+    return window.grecaptcha.execute(RECAPTCHA_KEY, { action: "submit" });
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -44,17 +62,11 @@ export default function Contact() {
       return;
     }
 
-    if (HAS_RECAPTCHA) {
-      const token = recaptchaRef.current?.getValue();
-      if (!token) {
-        setStatus("error-captcha");
-        return;
-      }
-    }
-
     setSending(true);
 
     try {
+      const token = await getRecaptchaToken();
+
       await emailjs.send(
         SERVICE_ID,
         TEMPLATE_ID,
@@ -63,14 +75,13 @@ export default function Contact() {
           from_email: form.email,
           subject: subjects.find((s) => s.value === form.subject)?.label || form.subject,
           message: form.message,
-          "g-recaptcha-response": recaptchaRef.current?.getValue() || ""
+          "g-recaptcha-response": token
         },
         PUBLIC_KEY
       );
 
       setStatus("success");
       setForm({ name: "", email: "", subject: "", message: "" });
-      recaptchaRef.current?.reset();
     } catch (err) {
       console.error("EmailJS error:", err?.text || err?.message || err);
       setStatus("error");
@@ -178,17 +189,6 @@ export default function Contact() {
                 />
               </div>
 
-              {HAS_RECAPTCHA && (
-                <div className="flex justify-center mt-2">
-                  <ReCAPTCHA ref={recaptchaRef} sitekey={RECAPTCHA_KEY} theme="dark" />
-                </div>
-              )}
-
-              {status === "error-captcha" && (
-                <div className="flex items-center gap-2 text-amber-400 text-sm">
-                  <AlertCircle size={16} /> Verifica que no eres un robot antes de enviar.
-                </div>
-              )}
               {status === "error" && (
                 <div className="flex items-center gap-2 text-red-400 text-sm">
                   <AlertCircle size={16} /> Error al enviar. Inténtalo de nuevo o escríbeme directamente a sergiomtzs96@gmail.com
@@ -202,7 +202,7 @@ export default function Contact() {
 
               <button
                 type="submit"
-                disabled={!isValid || sending}
+                disabled={!isValid || sending || (HAS_RECAPTCHA && !recaptchaLoaded)}
                 className="mt-4 group flex items-center justify-center gap-3 bg-foreground text-background py-4 px-8 rounded-[6px] font-semibold hover:bg-foreground/90 transition-all active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {sending ? (
