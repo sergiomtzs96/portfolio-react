@@ -15,6 +15,7 @@ const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
 const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
 const RECAPTCHA_KEY = import.meta.env.VITE_RECAPTCHA_SITE_KEY;
 const HAS_EMAILJS = PUBLIC_KEY && SERVICE_ID && TEMPLATE_ID;
+if (!HAS_EMAILJS) console.warn("EmailJS env vars missing");
 const HAS_RECAPTCHA = !!RECAPTCHA_KEY;
 
 const subjects = [
@@ -70,7 +71,8 @@ export default function Contact() {
       setStatus("success");
       setForm({ name: "", email: "", subject: "", message: "" });
       recaptchaRef.current?.reset();
-    } catch {
+    } catch (err) {
+      console.error("EmailJS error:", err?.text || err?.message || err);
       setStatus("error");
     } finally {
       setSending(false);
