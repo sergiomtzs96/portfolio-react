@@ -16,9 +16,6 @@ const RECAPTCHA_KEY = import.meta.env.VITE_RECAPTCHA_SITE_KEY;
 const HAS_EMAILJS = PUBLIC_KEY && SERVICE_ID && TEMPLATE_ID;
 const HAS_RECAPTCHA = !!RECAPTCHA_KEY;
 
-if (!HAS_EMAILJS) console.warn("EmailJS env vars missing");
-else emailjs.init(PUBLIC_KEY);
-
 const subjects = [
   { value: "", label: "Selecciona un asunto" },
   { value: "project", label: "Nuevo Proyecto" },
@@ -33,6 +30,8 @@ export default function Contact() {
   const [recaptchaLoaded, setRecaptchaLoaded] = useState(false);
 
   useEffect(() => {
+    if (HAS_EMAILJS) emailjs.init(PUBLIC_KEY);
+
     if (!HAS_RECAPTCHA) return;
     if (document.getElementById("recaptcha-script")) {
       setRecaptchaLoaded(true);
@@ -78,7 +77,7 @@ export default function Contact() {
           message: form.message,
           "g-recaptcha-response": token
         },
-        { publicKey: PUBLIC_KEY }
+        { blockHeadless: false }
       );
 
       setStatus("success");
