@@ -1,7 +1,18 @@
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
+import Carousel from "../components/Carousel";
+import AC1 from "../img/proyectos/AquaClean/ac1.png";
+import AC2 from "../img/proyectos/AquaClean/ac2.png";
+import AC3 from "../img/proyectos/AquaClean/ac3.png";
+import AC4 from "../img/proyectos/AquaClean/ac4.png";
+import AC5 from "../img/proyectos/AquaClean/ac5.png";
+import AC6 from "../img/proyectos/AquaClean/ac6.png";
+import AC7 from "../img/proyectos/AquaClean/ac7.png";
+import AC8 from "../img/proyectos/AquaClean/ac8.png";
 
-export default function ProjectRohigarnez() {
+const images = [AC1, AC2, AC3, AC4, AC5, AC6, AC7, AC8];
+
+export default function ProjectAquaCleanPro() {
   return (
     <div className="space-y-16 animate-in fade-in duration-700">
       <Link to="/" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors font-mono">
@@ -15,11 +26,11 @@ export default function ProjectRohigarnez() {
           <span>Web Corporativa</span>
         </div>
         <div className="space-y-4 max-w-3xl">
-          <h1 className="text-4xl md:text-5xl font-semibold tracking-tight text-foreground">
-            Rohigarnez S.L.
+            <h1 className="text-4xl md:text-5xl font-semibold tracking-tight text-foreground">
+            AquaCleanPro
           </h1>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Página web corporativa moderna para la empresa Rohigarnez, diseñada para mostrar sus servicios y productos de manera clara y profesional.
+            Plataforma web profesional para empresa de servicios de limpieza. Catálogo de servicios, solicitud de presupuestos online y panel de administración para gestión de clientes.
           </p>
         </div>
         <div className="flex flex-wrap items-center gap-3 pt-4">
@@ -29,15 +40,25 @@ export default function ProjectRohigarnez() {
           >
             Ver Repositorio
           </a>
+          <a
+            href="https://aquacleanprosl.vercel.app/"
+            className="flex items-center gap-2 bg-foreground text-background px-5 py-2 font-medium text-sm hover:bg-foreground/90 transition-colors"
+          >
+            Ir a la web
+          </a>
         </div>
       </section>
 
-      <section className="border border-border bg-secondary/30 p-4 md:p-8">
-        <img
-          src="/src/img/proyectos/imageRohigarnez.png"
-          alt="Rohigarnez S.L."
-          className="w-full object-cover rounded-sm border border-border"
-        />
+      <section className="border border-border bg-secondary/30 p-2 md:p-3">
+        <div className="border border-border overflow-hidden bg-card">
+          <div className="h-10 border-b border-border bg-secondary flex items-center px-4 gap-2">
+            <div className="w-3 h-3 rounded-full bg-red-500/60"></div>
+            <div className="w-3 h-3 rounded-full bg-amber-500/60"></div>
+            <div className="w-3 h-3 rounded-full bg-emerald-500/60"></div>
+            <span className="ml-4 text-[11px] font-mono text-muted-foreground">AquaCleanPro — Screenshots</span>
+          </div>
+          <Carousel images={images} />
+        </div>
       </section>
 
       <section className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -60,13 +81,10 @@ export default function ProjectRohigarnez() {
             <h2 className="text-2xl font-semibold">Descripción del Proyecto</h2>
             <div className="text-muted-foreground leading-relaxed text-sm space-y-4">
               <p>
-                Rohigarnez S.L. necesitaba una presencia web profesional que reflejara la calidad de sus servicios de fontanería y reformas. El objetivo era crear un sitio web moderno, responsivo y fácil de navegar.
+                AquaCleanPro necesitaba una presencia web profesional que reflejara la calidad de sus servicios de limpieza. El objetivo era crear un sitio web moderno con catálogo de servicios y un sistema de solicitud de presupuestos online.
               </p>
               <p>
-                Desarrollé una aplicación completa con React para el frontend y Node.js con Express para el backend, con MongoDB como base de datos. La web incluye un panel de administración para gestionar servicios, testimonios y solicitudes de contacto.
-              </p>
-              <p>
-                Implementé autenticación JWT para el panel de administración y diseñé una API REST completa para la gestión de contenido.
+                Desarrollé una aplicación full-stack con React para el frontend y Node.js con Express para el backend, con MongoDB como base de datos. La web incluye un panel de administración protegido con JWT para gestionar servicios y clientes.
               </p>
             </div>
           </section>

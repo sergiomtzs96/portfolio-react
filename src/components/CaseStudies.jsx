@@ -2,11 +2,12 @@ import { Link } from "react-router-dom";
 import { motion } from "motion/react";
 import { Layers, CheckCircle2, Box, LineChart, ArrowRight } from "lucide-react";
 import { projects } from "../data/projects";
+import Carousel from "./Carousel";
 
 const iconMap = {
   "home-inventory": Box,
   "football-stats": LineChart,
-  "rohigarnez": Box
+  "aquacleanpro": Box
 };
 
 export default function CaseStudies() {
@@ -73,27 +74,40 @@ export default function CaseStudies() {
                       </div>
                     </div>
                     <div className="bg-secondary/30 relative h-[300px] md:h-auto overflow-hidden">
-                      <div className="absolute inset-0 p-8 flex items-center justify-center">
-                        <div className="w-full h-full bg-card border border-border shadow-2xl rounded-sm overflow-hidden flex flex-col transform group-hover:scale-[1.02] transition-transform duration-500">
-                          <div className="h-6 border-b border-border flex items-center px-3 gap-2 bg-secondary">
-                            <div className="w-2 h-2 rounded-full bg-border"></div>
-                            <div className="w-2 h-2 rounded-full bg-border"></div>
-                            <div className="w-2 h-2 rounded-full bg-border"></div>
+                      {project.image ? (
+                        <div className="absolute inset-0 p-4 md:p-6 flex items-center justify-center">
+                          <div className="w-full h-full bg-card border border-border shadow-2xl overflow-hidden flex flex-col transform group-hover:scale-[1.02] transition-transform duration-500">
+                            <div className="h-6 border-b border-border flex items-center px-3 gap-2 bg-secondary shrink-0">
+                              <div className="w-2 h-2 rounded-full bg-red-500/60"></div>
+                              <div className="w-2 h-2 rounded-full bg-amber-500/60"></div>
+                              <div className="w-2 h-2 rounded-full bg-emerald-500/60"></div>
+                            </div>
+                            <Carousel images={project.image} fill />
                           </div>
-                          <div className="flex-1 flex">
-                            <div className="w-16 border-r border-border bg-secondary/50"></div>
-                            <div className="flex-1 p-4 space-y-3">
-                              <div className="h-4 w-1/3 bg-secondary rounded-sm"></div>
-                              <div className="grid grid-cols-3 gap-2">
-                                <div className="h-16 bg-secondary/50 rounded-sm border border-border"></div>
-                                <div className="h-16 bg-secondary/50 rounded-sm border border-border"></div>
-                                <div className="h-16 bg-secondary/50 rounded-sm border border-border"></div>
+                        </div>
+                      ) : (
+                        <div className="absolute inset-0 p-8 flex items-center justify-center">
+                          <div className="w-full h-full bg-card border border-border shadow-2xl rounded-sm overflow-hidden flex flex-col transform group-hover:scale-[1.02] transition-transform duration-500">
+                            <div className="h-6 border-b border-border flex items-center px-3 gap-2 bg-secondary">
+                              <div className="w-2 h-2 rounded-full bg-border"></div>
+                              <div className="w-2 h-2 rounded-full bg-border"></div>
+                              <div className="w-2 h-2 rounded-full bg-border"></div>
+                            </div>
+                            <div className="flex-1 flex">
+                              <div className="w-16 border-r border-border bg-secondary/50"></div>
+                              <div className="flex-1 p-4 space-y-3">
+                                <div className="h-4 w-1/3 bg-secondary rounded-sm"></div>
+                                <div className="grid grid-cols-3 gap-2">
+                                  <div className="h-16 bg-secondary/50 rounded-sm border border-border"></div>
+                                  <div className="h-16 bg-secondary/50 rounded-sm border border-border"></div>
+                                  <div className="h-16 bg-secondary/50 rounded-sm border border-border"></div>
+                                </div>
+                                <div className="h-24 bg-secondary/50 rounded-sm border border-border w-full mt-4"></div>
                               </div>
-                              <div className="h-24 bg-secondary/50 rounded-sm border border-border w-full mt-4"></div>
                             </div>
                           </div>
                         </div>
-                      </div>
+                      )}
                     </div>
                   </div>
                 </div>

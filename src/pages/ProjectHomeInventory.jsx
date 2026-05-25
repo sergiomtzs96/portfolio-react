@@ -1,5 +1,14 @@
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
+import Carousel from "../components/Carousel";
+import HI1 from "../img/proyectos/projectsIMG/HomeInventory1.png";
+import HI2 from "../img/proyectos/projectsIMG/HomeInventory2.png";
+import HI3 from "../img/proyectos/projectsIMG/HomeInventory3.png";
+import HI4 from "../img/proyectos/projectsIMG/HomeInventory4.png";
+import HI5 from "../img/proyectos/projectsIMG/HomeInventory5.png";
+import HI6 from "../img/proyectos/projectsIMG/HomeInventory6.png";
+
+const images = [HI1, HI2, HI3, HI4, HI5, HI6];
 
 export default function ProjectHomeInventory() {
   return (
@@ -29,59 +38,24 @@ export default function ProjectHomeInventory() {
           >
             Ver Repositorio
           </a>
+          <a
+            href="https://homeinventoryes.vercel.app/auth"
+            className="flex items-center gap-2 bg-foreground text-background px-5 py-2 font-medium text-sm hover:bg-foreground/90 transition-colors"
+          >
+            Ir a la web
+          </a>
         </div>
       </section>
 
-      <section className="border border-border bg-secondary/30 p-4 md:p-8">
-        <div className="w-full aspect-[16/9] bg-card border border-border shadow-2xl overflow-hidden flex flex-col">
-          <div className="h-10 border-b border-border bg-secondary flex items-center px-4 justify-between">
-            <div className="flex gap-2">
-              <div className="w-3 h-3 rounded-full bg-border"></div>
-              <div className="w-3 h-3 rounded-full bg-border"></div>
-              <div className="w-3 h-3 rounded-full bg-border"></div>
-            </div>
+      <section className="border border-border bg-secondary/30 p-2 md:p-3">
+        <div className="border border-border overflow-hidden bg-card">
+          <div className="h-10 border-b border-border bg-secondary flex items-center px-4 gap-2">
+            <div className="w-3 h-3 rounded-full bg-red-500/60"></div>
+            <div className="w-3 h-3 rounded-full bg-amber-500/60"></div>
+            <div className="w-3 h-3 rounded-full bg-emerald-500/60"></div>
+            <span className="ml-4 text-[11px] font-mono text-muted-foreground">Home Inventory — Screenshots</span>
           </div>
-          <div className="flex-1 flex">
-            <div className="w-48 border-r border-border bg-secondary/20 hidden md:block p-4 space-y-4">
-              <div className="h-6 w-3/4 bg-border/50 rounded-sm mb-8"></div>
-              <div className="space-y-2">
-                <div className="h-4 w-full bg-primary/20 rounded-sm"></div>
-                <div className="h-4 w-5/6 bg-border/30 rounded-sm"></div>
-                <div className="h-4 w-4/6 bg-border/30 rounded-sm"></div>
-              </div>
-            </div>
-            <div className="flex-1 p-6 space-y-6">
-              <div className="flex justify-between items-end">
-                <div className="space-y-2">
-                  <div className="h-6 w-48 bg-foreground/20 rounded-sm"></div>
-                  <div className="h-4 w-32 bg-border/50 rounded-sm"></div>
-                </div>
-                <div className="h-8 w-24 bg-primary/20 border border-primary/30 rounded-sm"></div>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                {[1,2,3].map(i => (
-                  <div key={i} className="h-24 bg-secondary/40 border border-border rounded-sm p-4 flex flex-col justify-between">
-                    <div className="h-3 w-16 bg-border/50 rounded-sm"></div>
-                    <div className="h-8 w-20 bg-foreground/30 rounded-sm"></div>
-                  </div>
-                ))}
-              </div>
-              <div className="flex-1 min-h-[200px] border border-border bg-secondary/10 rounded-sm p-4">
-                <div className="h-8 border-b border-border/50 mb-4 flex gap-4">
-                  <div className="h-4 w-1/4 bg-border/30 rounded-sm"></div>
-                  <div className="h-4 w-1/4 bg-border/30 rounded-sm"></div>
-                  <div className="h-4 w-1/4 bg-border/30 rounded-sm"></div>
-                </div>
-                {[1,2,3,4].map(i => (
-                  <div key={i} className="h-6 border-b border-border/30 mb-2 flex gap-4 items-center">
-                    <div className="h-2 w-1/4 bg-border/20 rounded-sm"></div>
-                    <div className="h-2 w-1/4 bg-border/20 rounded-sm"></div>
-                    <div className="h-2 w-1/4 bg-foreground/10 rounded-sm"></div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
+          <Carousel images={images} />
         </div>
       </section>
 

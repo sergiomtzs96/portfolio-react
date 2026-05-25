@@ -77,7 +77,8 @@ export default function Contact() {
           subject: subjects.find((s) => s.value === form.subject)?.label || form.subject,
           message: form.message,
           "g-recaptcha-response": token
-        }
+        },
+        { publicKey: PUBLIC_KEY }
       );
 
       setStatus("success");

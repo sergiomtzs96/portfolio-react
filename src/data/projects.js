@@ -1,5 +1,17 @@
-import imgRG from '../img/proyectos/imageRohigarnez.png';
-import imgHI from '../img/proyectos/imageHomeInventory.jpeg';
+import HI1 from '../img/proyectos/projectsIMG/HomeInventory1.png';
+import HI2 from '../img/proyectos/projectsIMG/HomeInventory2.png';
+import HI3 from '../img/proyectos/projectsIMG/HomeInventory3.png';
+import HI4 from '../img/proyectos/projectsIMG/HomeInventory4.png';
+import HI5 from '../img/proyectos/projectsIMG/HomeInventory5.png';
+import HI6 from '../img/proyectos/projectsIMG/HomeInventory6.png';
+import AC1 from '../img/proyectos/AquaClean/ac1.png';
+import AC2 from '../img/proyectos/AquaClean/ac2.png';
+import AC3 from '../img/proyectos/AquaClean/ac3.png';
+import AC4 from '../img/proyectos/AquaClean/ac4.png';
+import AC5 from '../img/proyectos/AquaClean/ac5.png';
+import AC6 from '../img/proyectos/AquaClean/ac6.png';
+import AC7 from '../img/proyectos/AquaClean/ac7.png';
+import AC8 from '../img/proyectos/AquaClean/ac8.png';
 
 export const projects = [
   {
@@ -13,7 +25,7 @@ export const projects = [
       "Dashboard UI & CRUD"
     ],
     tags: ["React", "Node.js", "MongoDB"],
-    image: imgHI,
+    image: [HI1, HI2, HI3, HI4, HI5, HI6],
     linkGH: 'https://github.com/sergiomtzs96/home-inventory'
   },
   {
@@ -30,17 +42,17 @@ export const projects = [
     linkGH: 'https://github.com/sergiomtzs96/portfolio-react'
   },
   {
-    id: "rohigarnez",
-    title: "Rohigarnez S.L.",
+    id: "aquacleanpro",
+    title: "AquaCleanPro",
     category: "Web Corporativa",
-    description: "Página web corporativa moderna para Rohigarnez, diseñada para mostrar servicios y productos. Interfaz responsiva con elementos visuales coherentes con la identidad de la empresa.",
+    description: "Plataforma web profesional para empresa de servicios de limpieza. Catálogo de servicios, solicitud de presupuestos online y panel de administración para gestión de clientes.",
     features: [
-      "Diseño responsivo y moderno",
-      "Secciones de servicios y testimonios",
-      "Formulario de contacto integrado"
+      "Catálogo interactivo de servicios",
+      "Solicitud de presupuestos online",
+      "Panel de administración protegido"
     ],
-    tags: ["React", "JavaScript", "Node.js", "MongoDB"],
-    image: imgRG,
+    tags: ["React", "Node.js", "MongoDB"],
+    image: [AC1, AC2, AC3, AC4, AC5, AC6, AC7, AC8],
     linkGH: 'https://github.com/sergiomtzs96/rohigarnez'
   }
 ];
